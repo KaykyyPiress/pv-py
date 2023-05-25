@@ -17,7 +17,7 @@ m = []
 for num_linha in range(12):
     linha = []
     for num_coluna in range(12):
-        linha.append(random.randint(0, 99))
+        linha.append(num_linha+ num_coluna)
     m.append(linha)
 
 for linha in range(len(m)):
@@ -25,11 +25,35 @@ for linha in range(len(m)):
         print("%3d" % m[linha][coluna], end="")
     print ()
 
-"""tipo = str(input("S ou M: "))
 
-if input.upper() == "S":
-    for i in range(len(m)):
-        for coluna in m[i]"""
+"""for i in range(12):
+    linha = []
+    for n in range(12):
+        linha.append(random.randint(0,99))
+    m.append(linha)
 
+print("Matriz original: ")
 for linha in range(len(m)):
-    print(m[linha][0])
+    for coluna in range(len(m[linha])):
+        print("%3d" % m[linha][coluna], end="")
+    print()"""
+
+soma = 0
+for linha in range(7, 12):
+    if linha == 7:
+        soma += m[7][5]
+        soma += m[7][6]
+    elif linha == 8:
+        for n in range(8, 12):
+            if linha == 8:
+                for x in range (4, 8):
+                    soma += m[8][x]
+                
+                
+print(soma)
+
+
+
+
+    
+
